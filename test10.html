@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- user-scalable -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>jQuery - 모바일 웹 앱1</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/slider/jquery.flexslider.js"></script>
+    <script src="js/custom.js"></script>
+    <style>
+    .page_tit { font-size: 5vw; clear: both; padding-bottom: 2rem; }
+    .ui-header .ui-title { text-align: center; }
+    </style>
+</head>
+<body class="ui-mobile-viewport ui-overlay-a">
+
+<!-- 메인 페이지 -->    
+<div id="page0" data-role="page" class="ui-page-theme-a ui-page-active">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <h1 role="heading" class="ui-title">메인 페이지</h1>
+        <a href="#login" data-role="button" data-rel="dialog" data-icon="user" class="ui-btn-right">로그인</a>
+    </header>
+    <nav data-role="navbar" data-grid="c" role="navigation" class="nav-glyphish-example ui-navbar">
+        <ul class="ui-grid-c">
+            <li class="ui-block-a">
+                <a href="#page1" id="chat" data-icon="comment" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">chat</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-b">
+                <a href="#page4" id="action" data-icon="action" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">action</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-c">
+                <a href="#page3" id="alert" data-icon="alert" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">alert</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-d">
+                <a href="#login" id="user" data-icon="user" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">login</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div data-role="content" role="main" class="ui-content">
+        <div data-role="container">
+            <h2 class="ui-title">외부문서 dialog</h2>
+            <div data-role="button-groups">
+                <a href="out.html" data-rel="dialog" class="ui-btn">outter open dialog</a>
+            </div>
+        </div>
+        <div data-role="container">
+            <h2 class="ui-title">내부 문서 dialog</h2>
+            <div data-role="button-groups">
+                <a href="#login" class="ui-btn" data-rel="dia">로그인</a>
+            </div>
+        </div>
+    </div>
+
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+        <h3>여기는 푸터 영역입니다.</h3>
+    </footer>
+</div>
+<!-- 메인 페이지 -->
+
+<!-- 서브 1 -->
+<div id="page1" data-role="page" class="ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-back ui-btn-icon-left" role="button">홈으로</a>
+        <h1 class="ui-title">섬네일</h1>
+    </header>
+    <div data-role="content" role="sub" class="ui-content">
+        <div data-role="collapsibleset" data-theme="a" data-content-theme="a">
+            <div data-role="collapsible">
+                <h3>Section 1</h3>
+                <p>I'm the collapsible content for section 1</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>Section 2</h3>
+                <p>I'm the collapsible content for section 2</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>Section 3</h3>
+                <p>I'm the collapsible content for section 3</p>
+            </div>
+        </div>  
+        <button type="button" data-icon="gear" data-iconpos="right" data-mini="true" data-inline="true" id="add">Add</button>
+        <button type="button" data-icon="plus" data-iconpos="right" data-mini="true" data-inline="true" id="expand">Expand last</button>
+        <button type="button" data-icon="minus" data-iconpos="right" data-mini="true" data-inline="true" id="collapse">Collapse last</button>
+        <div data-role="collapsibleset" data-content-theme="a" data-iconpos="right" id="set">
+            <div data-role="collapsible" id="set1" data-collapsed="true">
+                <h3>Section 1</h3>
+                <p>I'm the collapsible content.</p>
+            </div>
+        </div>      
+    </div>
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+        <h3>여기는 푸터 영역입니다.</h3>
+    </footer>
+</div>
+<!-- 서브 1 -->
+
+<!-- 서브 2 -->
+<div id="page2" data-role="page" class="ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-back ui-btn-icon-left" role="button">홈으로</a>
+        <h1 class="ui-title">서브2</h1>
+    </header>
+    <div data-role="content" role="sub" class="ui-content">
+        <p>글 목록</p>
+        <div data-role="fieldcontain">
+            <table data-role="table" class="ui-responsive">
+                <thead>
+                    <tr>
+                        <th>글번</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>게시판 테스트</td>
+                        <td>admin</td>
+                        <td>2022.12.23</td>
+                    </tr>
+                </tbody>
+            </table>    
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a href="#page2_write" data-role="button">작성</a>
+            </div>
+        </div> 
+    </div>
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+        <h3>여기는 푸터 영역입니다.</h3>
+    </footer>
+</div>
+
+<div id="page2" data-role="page" class="ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-back ui-btn-icon-left" role="button">홈으로</a>
+        <h1 class="ui-title">서브2</h1>
+    </header>
+    <div data-role="content" role="sub" class="ui-content">
+        <label for="text-basic">Text input:</label>
+        <input type="text" name="text-basic" id="text-basic" value="">
+        <label for="textarea">Textarea:</label>
+        <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date" value="">
+        <label for="file">File:</label>
+        <input type="file" name="file" id="file" value="">
+        <label for="slider-fill">Slider with fill and step of 50:</label>
+        <input type="range" name="slider-fill" id="slider-fill" value="60" min="0" max="1000" step="50" data-highlight="true">
+        <form>
+            <div data-role="rangeslider">
+                <label for="range-1a">Rangeslider:</label>
+                <input type="range" name="range-1a" id="range-1a" min="0" max="100" value="40">
+                <label for="range-1b">Rangeslider:</label>
+                <input type="range" name="range-1b" id="range-1b" min="0" max="100" value="80">
+            </div>
+        </form>
+        <label for="slider2">Flip switch:</label>
+        <select name="slider2" id="slider2" data-role="slider">
+            <option value="off">Off</option>
+            <option value="on">On</option>
+        </select>
+    </div>
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+        <h3>여기는 푸터 영역입니다.</h3>
+    </footer>
+</div>
+<!-- 서브 2 -->
+
+<!-- 서브 3 -->
+<div id="page3" data-role="page" class="ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-back ui-btn-icon-left" role="button">홈으로</a>
+        <h1 class="ui-title">글목록?</h1>
+    </header>
+    <div data-role="content" role="sub" class="ui-content">
+        <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview" data-filter="true">
+            <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-li-has-count ui-first-child">
+                2022-12-26 월요일
+                <span class="ui-li-count ui-body-inherit">1</span>
+            </li>
+            <li>
+                <a href="" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <h2>대체휴무없나요</h2>
+                    <p>
+                        <strong>제발</strong>
+                    </p>
+                    <p class="ui-li-aside">
+                        오후<strong>12시 26분</strong>
+                    </p>
+                </a>
+            </li>
+            <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-li-has-count">
+                2022-12-27 화요일
+                <span class="ui-li-count ui-body-inherit">2</span>
+            </li>
+            <li>
+                <a href="" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <h2>대체휴무없나요</h2>
+                    <p>
+                        <strong>제발</strong>
+                    </p>
+                    <p class="ui-li-aside">
+                        오후<strong>12시 26분</strong>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <h2>대체휴무없나요</h2>
+                    <p>
+                        <strong>제발</strong>
+                    </p>
+                    <p class="ui-li-aside">
+                        오후<strong>12시 26분</strong>
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+        <h3>여기는 푸터 영역입니다.</h3>
+    </footer>
+</div>
+<!-- 서브 3 -->
+
+<!-- 로그인 페이지 -->
+<div id="login" data-role="page" class="ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-back ui-btn-icon-left" role="button">홈으로</a>
+        <h1 class="ui-title">로그인</h1>
+    </header>
+    <div data-role="content" role="sub" class="ui-content">
+        <div data-role="fieldcontain">
+            <label for="id">아이디</label>
+            <input type="text" id="id" name="id"><br>
+            <label for="pw">비밀번호</label>
+            <input type="password" id="pw" name="pw">
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a href="#page0" data-role="button">로그인</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#page4" data-role="button">회원가입</a>
+            </div>
+        </div> 
+    </div>
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+        <h3>여기는 푸터 영역입니다.</h3>
+    </footer>
+</div>
+<!-- 로그인 페이지 -->
+
+<div id="page4" data-role="page" class="ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-back ui-btn-icon-left" role="button">홈으로</a>
+        <h1 class="ui-title">회원가입</h1>
+    </header>
+    <div data-role="content" role="sub" class="ui-content">
+        <label for="text-basic">아이디 : </label>
+        <input type="text" name="text-basic" id="text-basic" value="">
+        <label for="text-basic">비밀번호 : </label>
+        <input type="password" name="text-basic" id="text-basic" value="">
+        <label for="text-basic">비밀번호 확인 : </label>
+        <input type="password" name="text-basic" id="text-basic" value="">
+        <label for="text-basic">이름 : </label>
+        <input type="text" name="text-basic" id="text-basic" value="">
+        <label for="text-basic">주소 : </label>
+        <input type="text" name="text-basic" id="text-basic" value="">
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a href="#page0" data-role="button">가입</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#signup" data-role="button">취소</a>
+            </div>
+        </div> 
+    </div>
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+        <h3>여기는 푸터 영역입니다.</h3>
+    </footer>
+</div>
+
+
+
+
+
+</body>
+</html>

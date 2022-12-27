@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- user-scalable -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>untitle</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- swiper -->
+    <style>
+    .page_tit { font-size: 5vw; clear: both; padding-bottom: 2rem; }
+    .ui-header .ui-title { text-align: center; }
+    </style>
+    <!-- swiper -->
+    <style>
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+  
+        body {
+          background: #eee;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
+  
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+  
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+  
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
+  
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+    </style>
+    <!-- swiper -->
+</head>
+<body class="ui-mobile-viewport ui-overlay-a">
+
+
+<!-- 메인 페이지 #page0 -->    
+<div id="page0" data-role="page" class="ui-page-theme-a ui-page-active">
+    <!-- header -->
+    <header data-role="header" class="ui-header" data-theme="a">
+        <h1 role="heading" class="ui-title">shop</h1>
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" role="button">홈으로</a>
+        <a href="#login" data-role="button" data-rel="dialog" data-icon="user" class="ui-btn-right">로그인</a>
+    </header>
+    <!-- header -->
+
+    <!-- navbar -->
+    <nav data-role="navbar" data-grid="c" role="navigation" class="nav-glyphish-example ui-navbar">
+        <ul class="ui-grid-c">
+            <li class="ui-block-a">
+                <a href="#page1" id="chat" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#1</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-b">
+                <a href="#page2" id="action" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#2</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-c">
+                <a href="#page3" id="alert" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">장바구니</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-d">
+                <a href="#page4" id="user" data-icon="info" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">공지사항</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- navbar -->
+
+    <!-- content -->
+    <div data-role="content" role="main" class="ui-content">
+        <!-- swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="2.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="3.jpg" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+        </script>
+        <!-- swiper -->
+        <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview">
+            <li class="ui-li-has-thumb ui-first-child" data-role="list-divider">
+                cate#1
+            </li>
+            <li>
+                <a href="" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <img src="1_1.png" alt="">
+                    <h2>상품1</h2>
+                    <p>1000000000원</p>
+                </a>
+            </li>
+            <li>
+                <a href="" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <img src="1_1.png" alt="">
+                    <h2>상품2</h2>
+                    <p>1000000000원</p>
+                </a>
+            </li>
+            <li class="ui-li-has-thumb ui-first-child" data-role="list-divider">
+                cate#2
+            </li>
+            <li>
+                <a href="" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <img src="1_1.png" alt="">
+                    <h2>상품3</h2>
+                    <p>1000000000원</p>
+                </a>
+            </li>
+            <li>
+                <a href="" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <img src="1_1.png" alt="">
+                    <h2>상품4</h2>
+                    <p>1000000000원</p>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <!-- content -->
+
+    <!-- footer -->
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+        <h3>여기는 푸터 영역입니다.</h3>
+    </footer>
+    <!-- footer -->
+</div>
+<!-- 메인 페이지 #page0 -->
+
+<!-- 상품 카테고리 1 #page1 -->
+<div id="page1" data-role="page" class="ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <h1 role="heading" class="ui-title">CATE #1</h1>
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" role="button">홈으로</a>
+        <a href="#login" data-role="button" data-rel="dialog" data-icon="user" class="ui-btn-right">로그인</a>
+    </header>
+    <!-- navbar -->
+    <nav data-role="navbar" data-grid="c" role="navigation" class="nav-glyphish-example ui-navbar">
+        <ul class="ui-grid-c">
+            <li class="ui-block-a">
+                <a href="#page1" id="chat" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#1</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-b">
+                <a href="#page2" id="action" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#2</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-c">
+                <a href="#page3" id="alert" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">장바구니</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-d">
+                <a href="#page4" id="user" data-icon="info" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">공지사항</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- navbar -->
+    <div data-role="content" role="sub" class="ui-content">
+        <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview">
+            <li class="ui-li-has-thumb ui-first-child">
+                <a href="#page11" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <img src="1_1.png" alt="">
+                    <h2>제품명</h2>
+                    <p><span>1000000</span>원</p>
+                </a>
+            </li>
+            <li class="ui-li-has-thumb">
+                <a href="#page12" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <img src="1_1.png" alt="">
+                    <h2>제목</h2>
+                    <p>내용</p>
+                </a>
+            </li>
+            <li class="ui-li-has-thumb last-child">
+                <a href="#page13" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <img src="1_1.png" alt="">
+                    <h2>제목</h2>
+                    <p>내용</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+        <h3>여기는 푸터 영역입니다.</h3>
+    </footer>
+</div>
+<!-- 상품 카테고리 1 #page1 -->
+
+<!-- 상품 상세정보 #page11 -->
+<div id="page11" data-role="page" class="ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <h1 role="heading" class="ui-title">CATE #1</h1>
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" role="button">홈으로</a>
+        <a href="#login" data-role="button" data-rel="dialog" data-icon="user" class="ui-btn-right">로그인</a>
+    </header>
+    <!-- navbar -->
+    <nav data-role="navbar" data-grid="c" role="navigation" class="nav-glyphish-example ui-navbar">
+        <ul class="ui-grid-c">
+            <li class="ui-block-a">
+                <a href="#page1" id="chat" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#1</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-b">
+                <a href="#page2" id="action" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#2</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-c">
+                <a href="#page3" id="alert" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">장바구니</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-d">
+                <a href="#page4" id="user" data-icon="info" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">공지사항</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div role="sub" class="ui-content" data-role="content">
+        <div class="ui-body ui-body-a ui-corner-all">
+            <h3>상품명</h3>
+            <img src="1_1.png" alt="">
+            <p>상품 상세내용</p>
+            <p>상품 상세내용</p>
+            <h2>1000000원</h2>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a href="#cart" data-role="button">장바구니 담기</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#page1" data-role="button">목록으로</a>
+            </div>
+        </div> 
+    </div>
+    <footer class="ui-footer"data-role="footer" data-position="fixed">
+        <h2 class="ui-title">여기는 푸터</h2>
+    </footer>
+</div>
+<!-- 상품 상세정보 #page11 -->
+
+<!-- 상품 카테고리 2 #page2 -->
+<div id="page2" data-role="page" class="ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <h1 role="heading" class="ui-title">CATE #2</h1>
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" role="button">홈으로</a>
+        <a href="#login" data-role="button" data-rel="dialog" data-icon="user" class="ui-btn-right">로그인</a>
+    </header>
+    <!-- navbar -->
+    <nav data-role="navbar" data-grid="c" role="navigation" class="nav-glyphish-example ui-navbar">
+        <ul class="ui-grid-c">
+            <li class="ui-block-a">
+                <a href="#page1" id="chat" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#1</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-b">
+                <a href="#page2" id="action" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#2</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-c">
+                <a href="#page3" id="alert" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">장바구니</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-d">
+                <a href="#page4" id="user" data-icon="info" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">공지사항</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- navbar -->
+    <div data-role="content" role="sub" class="ui-content">
+        <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview">
+            <li class="ui-li-has-thumb ui-first-child">
+                <a href="#page21" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <img src="1_1.png" alt="">
+                    <h2>제품명</h2>
+                    <p><span>1000000</span>원</p>
+                </a>
+            </li>
+            <li class="ui-li-has-thumb">
+                <a href="#page22" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <img src="1_1.png" alt="">
+                    <h2>제목</h2>
+                    <p>내용</p>
+                </a>
+            </li>
+            <li class="ui-li-has-thumb last-child">
+                <a href="#page23" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <img src="1_1.png" alt="">
+                    <h2>제목</h2>
+                    <p>내용</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+        <h3>여기는 푸터 영역입니다.</h3>
+    </footer>
+</div>
+<!-- #page2 -->
+
+<!-- 상품 상세정보 #page21 -->
+<div id="page21" data-role="page" class="ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <h1 role="heading" class="ui-title">CATE #2</h1>
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" role="button">홈으로</a>
+        <a href="#login" data-role="button" data-rel="dialog" data-icon="user" class="ui-btn-right">로그인</a>
+    </header>
+    <!-- navbar -->
+    <nav data-role="navbar" data-grid="c" role="navigation" class="nav-glyphish-example ui-navbar">
+        <ul class="ui-grid-c">
+            <li class="ui-block-a">
+                <a href="#page1" id="chat" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#1</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-b">
+                <a href="#page2" id="action" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#2</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-c">
+                <a href="#page3" id="alert" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">장바구니</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-d">
+                <a href="#page4" id="user" data-icon="info" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">공지사항</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div role="sub" class="ui-content" data-role="content">
+        <div data-role="tabs">
+            <div id="fragment-1">
+                <h1>제품명</h1>
+                <img src="1_1.png" alt="">
+                <p>제품 상세 정보1<br>제품 상세 정보2<br>제품 상세 정보3</p>
+                <h2>1000000원</h2>
+            </div>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a href="#cart" data-role="button">장바구니 담기</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#page1" data-role="button">목록으로</a>
+            </div>
+        </div> 
+    </div>
+    <footer class="ui-footer"data-role="footer" data-position="fixed">
+        <h2 class="ui-title">여기는 푸터</h2>
+    </footer>
+</div>
+<!-- 상품 상세정보 #page21 -->
+
+
+<!-- 장바구니 #page3 -->
+<div id="page3" data-role="page" class="ui-page-theme-a">
+    <!-- header -->
+    <header data-role="header" class="ui-header" data-theme="a">
+        <h1 role="heading" class="ui-title">장바구니</h1>
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" role="button">홈으로</a>
+        <a href="#login" data-role="button" data-rel="dialog" data-icon="user" class="ui-btn-right">로그인</a>
+    </header>
+    <!-- header -->
+
+    <!-- navbar -->
+    <nav data-role="navbar" data-grid="c" role="navigation" class="nav-glyphish-example ui-navbar">
+        <ul class="ui-grid-c">
+            <li class="ui-block-a">
+                <a href="#page1" id="chat" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#1</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-b">
+                <a href="#page2" id="action" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#2</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-c">
+                <a href="#page3" id="alert" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">장바구니</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-d">
+                <a href="#page4" id="user" data-icon="info" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">공지사항</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- navbar -->
+
+    <!-- content -->
+    <div data-role="content" role="sub" class="ui-content">
+        <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview" data-filter="true">
+            <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-li-has-count">
+                상품 #1
+            </li>
+            <li class="ui-li-has-thumb">
+                <a href="#page21" class="ui-btn">
+                    <img src="1_1.png" alt="">
+                    <h2>10000000원</h2>
+                    <p>?</p>
+                </a>
+            </li>
+            <div class="ui-grid-c">
+                <div class="ui-block-a">
+                    <p>수량 : </p>
+                </div>
+                <div class="ui-block-b">
+                    <input type="number" name="number" pattern="[0-9]*" id="number-pattern" value="1">
+                </div>
+                <div class="ui-block-c">
+                    <a href="#" data-role="button">구매</a>
+                </div>
+                <div class="ui-block-d">
+                    <a href="#" data-role="button">삭제</a>
+                </div>
+            </div> 
+        </ul>
+    </div>
+    <!-- footer -->
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+        <h3>여기는 푸터 영역입니다.</h3>
+    </footer>
+    <!-- footer -->
+</div>
+<!-- 장바구니 #page3 -->
+
+<!-- 공지사항 목록 #page4 -->
+<div id="page4" data-role="page" class="ui-page-theme-a">
+    <!-- header -->
+    <header data-role="header" class="ui-header" data-theme="a">
+        <h1 role="heading" class="ui-title">공지사항</h1>
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" role="button">홈으로</a>
+        <a href="#login" data-role="button" data-rel="dialog" data-icon="user" class="ui-btn-right">로그인</a>
+    </header>
+    <!-- header -->
+
+    <!-- navbar -->
+    <nav data-role="navbar" data-grid="c" role="navigation" class="nav-glyphish-example ui-navbar">
+        <ul class="ui-grid-c">
+            <li class="ui-block-a">
+                <a href="#page1" id="chat" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#1</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-b">
+                <a href="#page2" id="action" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#2</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-c">
+                <a href="#page3" id="alert" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">장바구니</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-d">
+                <a href="#page4" id="user" data-icon="info" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">공지사항</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- navbar -->
+
+    <!-- content -->
+    <div data-role="content" role="sub" class="ui-content">
+        <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview" data-filter="true">
+            <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-li-has-count ui-first-child">
+                2022-12-26 월요일
+                <span class="ui-li-count ui-body-inherit">1</span>
+            </li>
+            <li>
+                <a href="#page41" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <h2>공지사항 제목</h2>
+                    <p>
+                        <strong>공지사항 내용 .....</strong>
+                    </p>
+                    <p class="ui-li-aside">
+                        오후<strong>12시 26분</strong>
+                    </p>
+                </a>
+            </li>
+            <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-li-has-count">
+                2022-12-27 화요일
+                <span class="ui-li-count ui-body-inherit">1</span>
+            </li>
+            <li>
+                <a href="" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                    <h2>대체휴무없나요</h2>
+                    <p>
+                        <strong>제발</strong>
+                    </p>
+                    <p class="ui-li-aside">
+                        오후<strong>12시 26분</strong>
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- content -->
+
+    <!-- footer -->
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+        <h3>여기는 푸터 영역입니다.</h3>
+    </footer>
+    <!-- footer -->
+</div>
+<!-- 공지사항 목록 #page4-->
+
+<!-- 공지사항 글 상세 #page41 -->
+<div id="page41" data-role="page" class="ui-page-theme-a">
+    <!-- header -->
+    <header data-role="header" class="ui-header" data-theme="a">
+        <h1 role="heading" class="ui-title">공지사항 상세보기</h1>
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" role="button">홈으로</a>
+        <a href="#login" data-role="button" data-rel="dialog" data-icon="user" class="ui-btn-right">로그인</a>
+    </header>
+    <!-- header -->
+
+    <!-- navbar -->
+    <nav data-role="navbar" data-grid="c" role="navigation" class="nav-glyphish-example ui-navbar">
+        <ul class="ui-grid-c">
+            <li class="ui-block-a">
+                <a href="#page1" id="chat" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#1</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-b">
+                <a href="#page2" id="action" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#2</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-c">
+                <a href="#page3" id="alert" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">장바구니</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-d">
+                <a href="#page4" id="user" data-icon="info" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">공지사항</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- navbar -->
+    <!-- content -->
+    <div data-role="content" role="sub" class="ui-content">
+        <div class="ui-corner-all custom-corners">
+            <div class="ui-bar ui-bar-a">
+                <h3>공지사항 제목</h3>
+            </div>
+            <div class="ui-body ui-body-a">
+                <p>공지사항 내용</p>
+            </div>
+        </div>
+        <div class="ui-grid-c">
+            <div class="ui-block-a">
+                <a href="#page4" data-role="button">목록</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#page4" data-role="button">삭제</a>
+            </div>
+            <div class="ui-block-c">
+                <a href="#page4" data-role="button">수정</a>
+            </div>
+        </div> 
+    </div>
+    <!-- content -->
+</div>
+<!-- 공지사항 글 상세 #page41 -->
+
+
+<!-- 공지사항 작성 폼 #page4_write -->
+<div id="page4_write" data-role="page" class="ui-page-theme-a">
+    <!-- header -->
+    <header data-role="header" class="ui-header" data-theme="a">
+        <h1 role="heading" class="ui-title">공지사항 작성</h1>
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" role="button">홈으로</a>
+        <a href="#login" data-role="button" data-rel="dialog" data-icon="user" class="ui-btn-right">로그인</a>
+    </header>
+    <!-- header -->
+
+    <!-- navbar -->
+    <nav data-role="navbar" data-grid="c" role="navigation" class="nav-glyphish-example ui-navbar">
+        <ul class="ui-grid-c">
+            <li class="ui-block-a">
+                <a href="#page1" id="chat" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#1</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-b">
+                <a href="#page2" id="action" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">#2</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-c">
+                <a href="#page3" id="alert" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">장바구니</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+            <li class="ui-block-d">
+                <a href="#page4" id="user" data-icon="info" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                    <span class="ui-btn-text">공지사항</span>
+                    <span class="ui-icon ui-icon-comment ui-icon-shadow"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- navbar -->
+
+    <!-- content -->
+    <div data-role="content" role="sub" class="ui-content">
+        <h1 class="page_tit">공지사항</h1>
+        <div role="sub" class="ui-content" data-role="content">    
+            <div data-role="container">
+                <form>
+                    <div data-role="fieldcontain">
+                        <label for="text-basic">제목</label>
+                        <input name="text-basic" id="text-basic" type="text" value="">
+                        <label for="textarea">내용</label>
+                        <textarea name="textarea" id="textarea" rows="8" cols="40"></textarea>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <a href="#page4" data-role="button">작성</a>
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="#page4" data-role="button">취소</a>
+                        </div>
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </div>    
+    <!-- content -->
+
+    <!-- footer -->
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+        <h3>여기는 푸터 영역입니다.</h3>
+    </footer>
+    <!-- footer -->
+
+</div>
+<!-- 공지사항 작성 폼 #page4_write -->
+
+<!-- 로그인 페이지 #login -->
+<div id="login" data-role="page" class="ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" role="button">홈으로</a>
+        <h1 class="ui-title">로그인</h1>
+    </header>
+    <div data-role="content" role="sub" class="ui-content">
+        <div data-role="fieldcontain">
+            <label for="login-id">아이디</label>
+            <input type="text" id="login-id" name="login-id"><br>
+            <label for="login-pw">비밀번호</label>
+            <input type="password" id="login-pw" name="login-pw">
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a href="#page0" data-role="button">로그인</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#signup" data-role="button">회원가입</a>
+            </div>
+        </div> 
+    </div>
+    <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+        <h3>여기는 푸터 영역입니다.</h3>
+    </footer>
+</div>
+<!-- 로그인 페이지 -->
+
+<!-- 회원 가입 폼 #signup -->
+<div id="signup" data-role="page" class="ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <a href="#page0" data-role="button" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-left" role="button">홈으로</a>
+        <h1 class="ui-title">로그인</h1>
+    </header>
+    <div data-role="content" role="sub" class="ui-content">
+        <h2 class="ui-title">회원가입</h2>
+        <div data-role="container">
+            <form>
+                <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+                    <li class="ui-field-contain ui-li-static ui-body-inherit ui-first-child">
+                        <input type="text" name="signup-id" id="signup-id" placeholder="ID 입력">
+                        <button type="button" class="ui-btn ui-btn-inline">중복확인</button>
+                    </li>
+                    <li class="ui-field-contain ui-li-static ui-body-inherit">
+                        <input type="password" name="signup-pw" id="signup-pw" placeholder="비밀번호 입력">
+                    </li>
+                    <li class="ui-field-contain ui-li-static ui-body-inherit">
+                        <input type="password" name="pw2" id="pw2" placeholder="비밀번호 확인">
+                    </li>
+                    <li class="ui-field-contain ui-li-static ui-body-inherit">
+                        <input type="tel" name="tel" id="tel" placeholder="전화번호 입력">
+                    </li>
+                    <li class="ui-field-contain ui-li-static ui-body-inherit ui-last-child">
+                        <input type="email" name="email" id="email" placeholder="이메일 입력">
+                    </li>
+                </ul>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a href="#page0" data-role="button">회원가입</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#page0" data-role="button">취소</a>
+                    </div>
+                </div> 
+            </form>
+        </div>
+    </div>
+    <footer data-role="footer" class="ui-footer" data-theme="b" data-position="fixed">
+        <h3>여기는 푸터입니다.</h3>
+    </footer>
+</div>
+<!-- 회원 가입 폼 #signup -->
+
+</body>
+</html>
